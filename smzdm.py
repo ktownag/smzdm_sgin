@@ -32,12 +32,12 @@ if data['checkin']['has_checkin']:
     info = '%s ：%s 你目前积分：%s，经验值：%s，金币：%s，碎银子：%s，威望：%s，等级：%s，已经签到：%s天' % (data['sys_date'], data['nickname'], data['point'], data['exp'], data['gold'], data['silver'], data['prestige'], data['level'],data['checkin']['daily_checkin_num'])
     print(info)
     # 通过Server酱发送状态 不需要可以删除
-    requests.post(serverChan, data={'text': data['nickname'] + '已经签到过了', 'desp': info})
+    ##requests.post(serverChan, data={'text': data['nickname'] + '已经签到过了', 'desp': info})
 else:
     checkin = req(checkin_url)['data']
     # print(checkin)
     info = '%s 目前积分：%s，增加积分：%s，经验值：%s，金币：%s，威望：%s，等级：%s' % (data['nickname'], checkin['point'], checkin['add_point'], checkin['exp'], checkin['gold'], checkin['prestige'], checkin['rank'])
     print(info)
     # 通过Server酱发送状态 不需要可以删除
-    requests.post(serverChan, data={'text': data['nickname'] + '签到信息', 'desp': info})
+    ##requests.post(serverChan, data={'text': data['nickname'] + '签到信息', 'desp': info})
  
